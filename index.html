@@ -2,75 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
     <title>Movie API project</title>
 </head>
 <body>
-<div class="search-background">
-  <img src="https://lh4.googleusercontent.com/-T4pmKmAS5D4/U0uihfPzEZI/AAAAAAAAA2c/sN0mjJS2bx4/w957-h374-no/141.jpg">
+<header>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="col-lg-4">
+      <img src="imgs/video-player.png" alt="Logo" class="left">
+      <h1 title="Movie" class="left">movie searcher</h1>
+      </div>
+    </div>
+  </nav>
+</header>
+<div id="big-input">
+  <div class="container">
+    <i class="fa fa-search" aria-hidden="true"></i><input id="keyword" type="text" placeholder="Rechercher un film ">
+      <button id ="search" type="submit" class="btn btn-success">Search</button>
+  </div>
 </div>
-<div class="well-searchbox">
-  <form class="form-horizontal" role="form">
-    <div class="form-group">
-      <label class="col-md-4 control-label">Keyword</label>
-      <div class="col-md-8">
-        <input type="text" class="form-control" placeholder="Keyword">
-      </div>
-    </div>
+<div class="content">
+    <section id="hide" class="container">
+        <article>
+            <div class="panel panel-info">
+                <div class="panel-heading ">
+                    <h2 class="center" id="name"></h2>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-4">
+                        <img id="affiche" src="" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <table class="table">
+                            <tr id="year_show">
+                                <td>Date de sortie : </td>
+                                <td><span id="year"></span></td>
+                            </tr>
+                            <tr id="rated_show">
+                                <td>Note : </td>
+                                <td><span id="rated"></span></td>
+                            </tr>
+                            <tr id="released_show">
+                                <td>Released : </td>
+                                <td><span id="released"></span></td>
+                            </tr>
+                            <tr id="runtime_show">
+                                <td>Runtime : </td>
+                                <td><span id="runtime"></span></td>
+                            </tr>
+                            <tr id="genre_show">
+                                <td>Genre : </td>
+                                <td><span id="genre"></span></td>
+                            </tr>
 
-    <div class="form-group">
-      <label class="col-md-4 control-label">Country</label>
-      <div class="col-md-8">
-        <select class="form-control" placeholder="Country">
-          <option value="">All</option>
-          <option value="">Country 1</option>
-          <option value="">Country 2</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="col-md-4 control-label">Province</label>
-      <div class="col-md-8">
-        <select class="form-control" placeholder="Province">
-          <option value="">All</option>
-          <option value="">Province 1</option>
-          <option value="">Province 2</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="col-md-4 control-label">City</label>
-      <div class="col-md-8">
-        <select class="form-control" placeholder="City">
-          <option value="">All</option>
-          <option value="">City 1</option>
-          <option value="">City 2</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="col-md-4 control-label">Category</label>
-      <div class="col-md-8">
-        <select class="form-control" placeholder="Category">
-          <option value="">All</option>
-          <option value="">Category 1</option>
-          <option value="">Category 2</option>
-        </select>
-      </div>
-    </div>
-    <div class="col-sm-offset-4 col-sm-5">
-      <button type="submit" class="btn btn-success">Search</button>
-    </div>
-  </form>
+                            <tr id="director_show">
+                                <td>Réalisateur : </td>
+                                <td><span id="director"></span></td>
+                            </tr>
+                            <tr id="writer_show">
+                                <td>Auteur : </td>
+                                <td><span id="writer"></span></td>
+                            </tr>
+                            <tr id="actors_show">
+                                <td>Acteurs : </td>
+                                <td><span id="actors"></span></td>
+                            </tr>
+                            <tr id="plot_show">
+                                <td>plot : </td>
+                                <td><span id="plot"></span></td>
+                            </tr>
+                            <tr id="language_show">
+                                <td>Langue : </td>
+                                <td><span id="language"></span></td>
+                            </tr>
+                            <tr id="country_show">
+                                <td>Pays : </td>
+                                <td><span id="country"></span></td>
+                            </tr>
+                            <tr id="awards_show">
+                                <td>Awards : </td>
+                                <td><span id="awards"></span></td>
+                            </tr>
+                            <tr id="poster_show">
+                                <td>poster : </td>
+                                <td><span id="poster"></span></td>
+                            </tr>
+                            <tr id="metascore_show">
+                                <td>metascore: </td>
+                                <td><span id="metascore"></span></td>
+                            </tr>
+                            <tr id="imdbRating_show">
+                                <td>imdbRating : </td>
+                                <td><span id="imdbRating"></span></td>
+                            </tr>
+                            <tr id="imdbVotes_show">
+                                <td>imdbVotes : </td>
+                                <td><span id="imdbVotes"></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
 </div>
-
-
+<div>
+  <img src="imgs/movies.jpg" alt="Movie blabla">
+</div>
+<script src="bootstrap/js/jquery.min.js"></script> <!-- jQuery est inclus ! -->
+<script src="js/script.js"></script> <!-- jQuery est inclus ! -->
 </body>
 </html>
