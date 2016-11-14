@@ -1,6 +1,12 @@
+body
+{
+    background-image: url(../imgs/movies.jpg);
+}
+
 .content{
     background: linear-gradient(to bottom right, #212b2d, #2f383d);
 }
+
 nav h1{
     color: #f5f5f5;
 }
@@ -50,4 +56,65 @@ nav ul{
 
 tr{
     display:none;
+}
+
+.center_horizontal
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.center_vertical
+{
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.hide
+{
+    display: none;
+}
+
+article
+{
+    background-color: white;
+}
+
+
+.list-type6{
+    width:410px;
+    margin:0 auto;
+}
+/* LIST #8 */
+.list-type6 { }
+.list-type6 ul {
+    list-style:none;
+}
+.list-type6 ul li {
+    font-size:15px;
+    font-family: 'Raleway', sans-serif;
+}
+.list-type6 ul li a {
+    display:block;
+    width:390px;
+    margin-left: -40px;
+    height:24px;
+    background-color:#03B3CB;
+    border-left:5px solid #222;
+    border-right:5px solid #222;
+    padding-left:10px;
+    padding-top:7px;
+    text-decoration:none;
+    color:white;
+    margin-bottom: 7px;
+    transition: all .2s ease-in-out;
+}
+.list-type6 ul li a:hover {
+    -moz-transform:rotate(-5deg);
+    -moz-box-shadow:10px 10px 20px #000000;
+    -webkit-transform:rotate(-5deg);
+    -webkit-box-shadow:10px 10px 20px #000000;
+    transform:rotate(-5deg);
+    box-shadow:10px 10px 20px #000000;
 }

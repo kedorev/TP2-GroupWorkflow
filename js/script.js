@@ -43,6 +43,7 @@ function Affichage(data){
         alert('U bad');
     }else {
 
+        $('#main').css('display', 'block');
         if (data.Title) {
             $('#name').text(data.Title);
         }
@@ -95,9 +96,11 @@ function Affichage(data){
             $('#awards').text(data.Awards);
         }
         if (data.Poster && data.Poster != "N/A") {
-            $('#poster_show').show();
-            $('#poster').text(data.Poster);
             $('#affiche').attr('src',data.Poster);
+        }
+        else
+        {
+            $('#affiche').attr('src','imgs/noimagefound.jpg');
         }
         if (data.Metascore && data.Metascore != "N/A") {
             $('#metascore_show').show();
