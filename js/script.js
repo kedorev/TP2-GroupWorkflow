@@ -9,9 +9,14 @@ jQuery(document).ready(function(){
         // console.log(keyword);
         var result = baseUrl + keyword + endUrl;
         monAjax(result);
+        $(document).keypress(function(e) {
+            if(e.which == 13) {
+                alert('You pressed enter!');
+                monAjax(result);
+            }
+        });
     });
 });
-
 
 
 function monAjax(urlApi) {
