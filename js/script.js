@@ -1,20 +1,25 @@
 jQuery(document).ready(function(){
     $( "#search" ).click(function(e) {
+        $('section').hide();
         e.preventDefault();
         var keyword = $('#keyword').val();
         // var keyword = 'spiderman';
         var baseUrl = ('http://www.omdbapi.com/?t=');
         var endUrl = ('&y=&plot=full&r=json');
-
-        // console.log(keyword);
         var result = baseUrl + keyword + endUrl;
         monAjax(result);
-        $(document).keypress(function(e) {
-            if(e.which == 13) {
-                alert('You pressed enter!');
-                monAjax(result);
-            }
-        });
+    });
+    // console.log(keyword);
+
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+          $('section').hide();
+          var keyword = $('#keyword').val();
+          var baseUrl = ('http://www.omdbapi.com/?t=');
+          var endUrl = ('&y=&plot=full&r=json');
+          var result = baseUrl + keyword + endUrl;
+          monAjax(result);
+        }
     });
 });
 
@@ -120,5 +125,6 @@ function Affichage(data){
             $('#imdbVotes').text(data.imdbVotes);
         }
         $('#keyword').val('')
+        $('section').show();
     }// Fin du else
 }
