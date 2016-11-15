@@ -119,6 +119,9 @@ function Affichage(data){
             $('#imdbVotes_show').show();
             $('#imdbVotes').text(data.imdbVotes);
         }
-        $('#keyword').val('')
+        $('#keyword').val('');
+        $('#backhide').css('display', 'none');
     }// Fin du else
+
 }
+
